@@ -3,7 +3,7 @@ import React from 'react';
 
 
 
-const DisplayCard = () => {
+const DisplayCard = (props) => {
     return (  
         <div className="col s12 m">
         <h2 className="header">Horizontal Card</h2>
@@ -13,7 +13,7 @@ const DisplayCard = () => {
           </div>
           <div className="card-stacked">
             <div className="card-content">
-              <p></p>
+              <p>{props.name}</p>
             </div>
             <div className="card-action">
               <a href="#">This is a link</a>

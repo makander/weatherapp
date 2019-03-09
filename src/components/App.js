@@ -1,27 +1,44 @@
-import React, { Component } from 'react';
-import DisplayCard from './DisplayCard';
+import React from "react";
+import DisplayCard from "./DisplayCard";
 
-class App extends Component {
- state = { long: null, lat: null};
+class App extends React.Component {
+  state = {
+    lat: null,
+    long: null,
+    weather: null
+  };
 
- componentDidMount() {
-  window.navigator.geolocation.getCurrentPosition(
-    position => this.setState({
-      long: position.coords.longitude, 
-      lat: position.coords.latitude})  
-  );
- }
+  componentDidMount() {
+    this.getPosition();
+  }
 
-fetch()
+getPosition = () => {
+  navigator.geolocation.getCurrentPosition(position =>
+    this.setState(
+      {
+      lat: position.coords.latitude,
+      long: position.coords.longitude
+    }, () => this.getWeather()
+    )
+  )
+}
 
-
+getWeather = async () => {    
+  const response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${this.state.lat}&lon=${this.state.long}&appid=4521fff2c420c8b93faa362bf688ad05&units=metric`
+    )
+    const data = await response.json(); 
+    this.setState({weather: data});
+    }
 
   render() {
-    return (
-      <div className="App">This is tha app comp. 
-      <DisplayCard />
-      </div>
-    );
+    if ( this.state.weather !== null ) {
+      return ( <div>
+          {console.log(this.state)}
+      </div> )
+    } else {
+      return <div>Loading data</div>
+    }
   }
 }
 
