@@ -18,9 +18,8 @@ getPosition = () => {
       {
       lat: position.coords.latitude,
       long: position.coords.longitude
-    }, () => this.getWeather()
-    )
-  )
+    }, () => (this.getWeather())
+  ))
 }
 
 getWeather = async () => {    
@@ -33,7 +32,7 @@ getWeather = async () => {
 
   render() {
     if ( this.state.weather !== null ) {
-      return ( <div>
+      return ( <div> <DisplayCard weather={this.state.weather} />
           {console.log(this.state)}
       </div> )
     } else {
