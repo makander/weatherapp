@@ -1,6 +1,7 @@
 import React from "react";
 import DisplayCard from "./DisplayCard";
 import WeeklyForecast from "./WeeklyForecast";
+import DailyOverview from "./DailyOverview";
 
 class App extends React.Component {
   state = {
@@ -47,12 +48,20 @@ class App extends React.Component {
     this.setState({ weather: dailyWeather, forecast: forecastData });
   };
 
+
+  
+
+
+
+
   render() {
     if (this.state.weather !== null) {
       return (
-        <div className="container">
-          {" "}
-          <DisplayCard weather={this.state.weather} forecast={this.state.forecast} />
+        <div className="container ">
+          <div className="row">
+          <DisplayCard weather={this.state.weather} />
+          <DailyOverview forecast={this.state.forecast} />
+          </div>
           <WeeklyForecast forecast={this.state.forecast} />
           {console.log(this.state)}
         </div>
