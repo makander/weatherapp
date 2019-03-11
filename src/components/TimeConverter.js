@@ -1,8 +1,8 @@
-const TimeConverter = sec => {
-  var sec;
-  var date = new Date(sec * 1000);
-  var timestr = date.toLocaleTimeString('en-GB');
-  return timestr;
-};
-
+const TimeConverter = (sec) => {
+    let date = new Date(sec * 1000);
+    let timestr = date.toLocaleTimeString('en-GB');
+    let formatedtime = timestr.slice(0, timestr.lastIndexOf(":"));
+    return formatedtime;
+  }
 export default TimeConverter;
+
