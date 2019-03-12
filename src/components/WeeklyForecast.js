@@ -5,12 +5,12 @@ import DayConverter from "./DayConverter";
 const WeeklyForecast = props => {
   const filteredList = props.forecast.list
     .filter(element => element.dt_txt.includes("12:00"))
-    .map(element => <WeeklyInfo data={element} />);
+    .map(element => <WeeklyCard data={element} />);
     return <div className="row center-align">{filteredList}</div>;
 
 };
 
-const WeeklyInfo = ({
+const WeeklyCard = ({
   data: {
     dt,
     main: { temp },

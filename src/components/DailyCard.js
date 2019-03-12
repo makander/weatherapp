@@ -2,7 +2,7 @@ import React from "react";
 import WeatherIcon from "react-icons-weather";
 import TimeConverter from "./TimeConverter";
 
-const DisplayCard = ({
+const DailyCard = ({
   weather: {
     name,
     dt,
@@ -14,10 +14,10 @@ const DisplayCard = ({
   forecast
 }) => {
   return (
-    <div class="col s12 m4">
-      <div class="card">
-        <div class="card-content">
-          <span class="card-title">{name}</span>
+    <div className="col s12 m4">
+      <div className="card">
+        <div className="card-content">
+          <span className="card-title">{name}</span>
           <WeatherIcon
             name="owm"
             iconId={id.toString()}
@@ -36,4 +36,4 @@ const DisplayCard = ({
   );
 };
 
-export default DisplayCard;
+export default DailyCard;
