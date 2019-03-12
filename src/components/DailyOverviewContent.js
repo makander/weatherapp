@@ -9,7 +9,7 @@ const DailyOverviewContent = props => {
     .filter(element => element.dt_txt.includes(`${today}`))
     .map(element => <DailyOverViewCard data={element} />);
   return (
-    <div className="col s12 m4">
+    <div className="col s12 m6">
       <div className="card">
         <div className="card-content">
           <span className="card-title">Daily Overview</span>
@@ -27,15 +27,15 @@ const DailyOverViewCard = ({ data: {
 }}) => {
   return (
     <div>
-       <WeatherIcon
+      <p>{TimeConverter(dt)}</p>
+      <div><WeatherIcon
           className="icon"
           name="owm"
           iconId={id.toString()}
           flip="horizontal"
           rotate="90"
-        />
-      <p>{TimeConverter(dt)}</p>
-      <p>{temp} &#8451;</p>
+        /></div>
+      <p>{temp} &#176;</p>
     </div>
   );
 };

@@ -28,7 +28,7 @@ const WeeklyCard = ({
           flip="horizontal"
           rotate="90"
         />
-        <p>{temp} &#8451;</p>
+        <p>{temp} &#176;</p>
   
       </div>
     </div>

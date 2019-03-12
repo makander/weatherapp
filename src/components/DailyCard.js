@@ -25,7 +25,7 @@ const DailyCard = ({
             rotate="90"
             id="dailyCardIcon"
           />
-          <p> Temperature: {temp} &#8451; </p>
+          <p> Temperature: {temp} &#176; </p>
           <p> Humidity: {humidity} %</p>
           <p> Wind: {speed} m/s</p>
           <p> Sunset: {TimeConverter([sunset])}</p>
