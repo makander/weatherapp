@@ -15,7 +15,7 @@ const DailyCard = ({
 }) => {
   return (
     <div className="col s12 m4">
-      <div className="card">
+      <div className="card" id="dailycard">
         <div className="card-content">
           <span className="card-title">{name}</span>
           <WeatherIcon
@@ -23,13 +23,13 @@ const DailyCard = ({
             iconId={id.toString()}
             flip="horizontal"
             rotate="90"
+            id="dailyCardIcon"
           />
-          <p> Temperature: {temp} </p>
+          <p> Temperature: {temp} &#8451; </p>
           <p> Humidity: {humidity} %</p>
-          <p> Wind: {speed}</p>
+          <p> Wind: {speed} m/s</p>
           <p> Sunset: {TimeConverter([sunset])}</p>
           <p> Sunrise: {TimeConverter([sunrise])}</p>
-          <p> Time: {TimeConverter(dt)} </p>
         </div>
       </div>
     </div>

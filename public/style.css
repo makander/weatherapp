@@ -1,11 +1,16 @@
-body{
+body{ 
   background-color: whitesmoke;
 }
 
-.card-image{
+.card-image {
  font-size: 7rem;
  padding: 5rem;
 }
+
+#dailyCardIcon {
+  font-size: 6.5rem;
+}
+
 
 .card-content {
   text-align: center;
