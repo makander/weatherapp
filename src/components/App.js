@@ -2,6 +2,7 @@ import React from "react";
 import DailyCard from "./DailyCard";
 import WeeklyForecast from "./WeeklyForecast";
 import DailyOverviewContent from "./DailyOverviewContent";
+import Header from "./Header";
 
 class App extends React.Component {
   state = {
@@ -27,20 +28,20 @@ class App extends React.Component {
     );
   };
 
-  getWeather = async () => {
+  getWeather = async (units = "metric") => {
     const weatherResponse = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?lat=${
         this.state.lat
       }&lon=${
         this.state.long
-      }&appid=4521fff2c420c8b93faa362bf688ad05&units=metric`
+      }&appid=3b7e14abfb7372f6c8870898d5c70aa5&units=${units}`
     );
     const forecastResponse = await fetch(
       `https://api.openweathermap.org/data/2.5/forecast?lat=${
         this.state.lat
       }&lon=${
         this.state.long
-      }&appid=4521fff2c420c8b93faa362bf688ad05&units=metric`
+      }&appid=3b7e14abfb7372f6c8870898d5c70aa5&units=${units}`
     );
     const dailyWeather = await weatherResponse.json();
     const forecastData = await forecastResponse.json();
@@ -52,9 +53,18 @@ class App extends React.Component {
     if (this.state.weather !== null) {
       return (
         <div className="container ">
+          <Header
+            forecast={this.state.forecast}
+            weather={this.state.weather}
+            getWeather={this.getWeather}
+            test={"test"}
+          />
           <div className="row">
-          <DailyCard weather={this.state.weather} />
-          <DailyOverviewContent forecast={this.state.forecast}  weather={this.state.weather} />
+            <DailyCard weather={this.state.weather} />
+            <DailyOverviewContent
+              forecast={this.state.forecast}
+              weather={this.state.weather}
+            />
           </div>
           <WeeklyForecast forecast={this.state.forecast} />
           {console.log(this.state)}

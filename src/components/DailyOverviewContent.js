@@ -20,11 +20,13 @@ const DailyOverviewContent = props => {
   );
 };
 
-const DailyOverViewCard = ({ data: {
-  dt,
-  main: { temp },
-  weather: [{ id }]
-}}) => {
+const DailyOverViewCard = ({
+  data: {
+    dt,
+    main: { temp },
+    weather: [{ id }]
+  }
+}) => {
   return (
     <div>
       <p>{TimeConverter(dt)}</p>
