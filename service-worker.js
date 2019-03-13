@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/08-weatherapp-makander/precache-manifest.3a924ff87bb29c55ea9b2d78091196f4.js"
+  "/weatherapp/precache-manifest.619193dc7c3aa217f284bd5aa19f880a.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/08-weatherapp-makander/index.html", {
+workbox.routing.registerNavigationRoute("/weatherapp/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
