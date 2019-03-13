@@ -20,20 +20,22 @@ const DailyOverviewContent = props => {
   );
 };
 
-const DailyOverViewCard = ({ data: {
-  dt,
-  main: { temp },
-  weather: [{ id }]
-}}) => {
+const DailyOverViewCard = ({
+  data: {
+    dt,
+    main: { temp },
+    weather: [{ id }]
+  }
+}) => {
   return (
-    <div>
-       <WeatherIcon
-          className="icon"
-          name="owm"
-          iconId={id.toString()}
-          flip="horizontal"
-          rotate="90"
-        />
+    <div className="daily-ov-content">
+      <WeatherIcon
+        className="icon"
+        name="owm"
+        iconId={id.toString()}
+        flip="horizontal"
+        rotate="90"
+      />
       <p>{TimeConverter(dt)}</p>
       <p>{temp} &#8451;</p>
     </div>
