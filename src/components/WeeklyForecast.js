@@ -14,7 +14,7 @@ const WeeklyCard = ({
   data: {
     dt,
     main: { temp },
-    weather: [{ id }]
+    weather: [{ id, description }]
   }
 }) => {
   return (

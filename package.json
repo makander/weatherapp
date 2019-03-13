@@ -15,9 +15,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "npm run remotePublish && gh-pages -d build && npm run remoteRestore",
-    "remotePublish": "git remote set-url origin https://github.com/makander/weatherapp.git",
-    "remoteRestore": "git remote set-url origin https://github.com/chas-academy/08-weather-app-makander"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

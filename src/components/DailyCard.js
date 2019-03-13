@@ -6,7 +6,7 @@ const DailyCard = ({
   weather: {
     name,
     dt,
-    weather: [{ id }],
+    weather: [{ id, description }],
     sys: { sunrise, sunset },
     main: { temp, humidity },
     wind: { speed }
@@ -27,7 +27,7 @@ const DailyCard = ({
           />
           <p> Temperature: {temp} &#176; </p>
           <p> Humidity: {humidity} %</p>
-          <p> Wind: {speed} m/s</p>
+          <p> Wind: {speed} </p>
           <p> Sunset: {TimeConverter([sunset])}</p>
           <p> Sunrise: {TimeConverter([sunrise])}</p>
         </div>

@@ -1,14 +1,11 @@
 import React from "react";
 
 const Header = props => {
-  {
+  
     return (
       <nav>
         <div className="nav-wrapper">
           <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li>
-              <input className="input-field grey lighten-4 center-align" type="text" placeholder="search"/> 
-            </li>
             <li>
               <button
                 className="waves-effect waves-light btn-small"
@@ -33,7 +30,7 @@ const Header = props => {
         </div>
       </nav>
     );
-  }
+  
 };
 
 export default Header;
