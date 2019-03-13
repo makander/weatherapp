@@ -24,12 +24,12 @@ self.__precacheManifest = [
     "url": "/weatherapp/static/media/weathericons-regular-webfont.8cac70eb.woff"
   },
   {
-    "revision": "4618f0de2a818e7ad3fe880e0b74d04a",
-    "url": "/weatherapp/static/media/weathericons-regular-webfont.4618f0de.ttf"
-  },
-  {
     "revision": "4b658767da6bd92ce2addb3ce512784d",
     "url": "/weatherapp/static/media/weathericons-regular-webfont.4b658767.eot"
+  },
+  {
+    "revision": "4618f0de2a818e7ad3fe880e0b74d04a",
+    "url": "/weatherapp/static/media/weathericons-regular-webfont.4618f0de.ttf"
   },
   {
     "revision": "ecaf8b481729b18f6a8494d9f691cdae",
