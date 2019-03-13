@@ -1,3 +1,5 @@
+Final version can be found at: https://makander.github.io/weatherapp/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
