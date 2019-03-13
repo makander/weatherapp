@@ -1,39 +1,33 @@
 import React from "react";
 
 const Header = props => {
-  function handleClick(e) {
-    e.preventDefault();
-    props.getWeather("imperial");
-    console.log("The link was clicked.");
-  }
-
   {
     return (
-      <nav class="navbar s12">
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo" />
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <nav>
+        <div className="nav-wrapper">
+          <ul id="nav-mobile" className="right hide-on-med-and-down">
             <li>
-              <form action="#">
-                <button
-                  className="waves-effect waves-light btn-small"
-                  onClick={e => {
-                    e.preventDefault();
-                    props.getWeather("imperial");
-                  }}
-                >
-                  Imperial
-                </button>
-                <button
-                  className="waves-effect waves-light btn-small"
-                  onClick={e => {
-                    e.preventDefault();
-                    props.getWeather("metric");
-                  }}
-                >
-                  Metric
-                </button>
-              </form>
+              <input className="input-field grey lighten-4 center-align" type="text" placeholder="search"/> 
+            </li>
+            <li>
+              <button
+                className="waves-effect waves-light btn-small"
+                onClick={e => {
+                  e.preventDefault();
+                  props.getWeather("imperial");
+                }}>
+                Imperial
+              </button>
+            </li>
+            <li>
+              <button
+                className="waves-effect waves-light btn-small"
+                onClick={e => {
+                  e.preventDefault();
+                  props.getWeather("metric");
+                }}>
+                Metric
+              </button>
             </li>
           </ul>
         </div>

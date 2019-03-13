@@ -11,7 +11,7 @@ const DailyOverviewContent = props => {
   return (
     <div className="col s12 m6">
       <div className="card">
-        <div className="card-content">
+        <div className="card-content center-align">
           <span className="card-title">Daily Overview</span>
           {filteredList}
         </div>

@@ -52,14 +52,13 @@ class App extends React.Component {
   render() {
     if (this.state.weather !== null) {
       return (
-        <div className="container ">
-          <Header
+        <div className="container">
+         <Header
             forecast={this.state.forecast}
             weather={this.state.weather}
             getWeather={this.getWeather}
-            test={"test"}
           />
-          <div className="row">
+          <div className="row" id="daily-card-row">
             <DailyCard weather={this.state.weather} />
             <DailyOverviewContent
               forecast={this.state.forecast}
