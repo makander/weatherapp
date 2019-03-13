@@ -2,18 +2,18 @@ body {
   background-color: whitesmoke;
 }
 
+ #daily-card-row {
+  padding-top: 1rem;
+} 
+
 .card-image {
   font-size: 7rem;
   padding: 5rem;
 }
 
 #dailyCardIcon {
-  font-size: 4.5rem;
-  padding: 1rem;
-}
-
-.card-content {
-  text-align: center;
+  font-size: 3.5rem;
+  padding: 1.5rem;
 }
 
 .card-content p {
@@ -33,6 +33,6 @@ body {
   padding: 0.5rem;
 }
 
-.navbar {
-  width: 100%;
+.btn-small {
+ margin: 1rem;
 }
