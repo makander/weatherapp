@@ -53,7 +53,7 @@ class App extends React.Component {
     if (this.state.weather !== null) {
       return (
         <div className="container">
-         <Header
+          <Header
             forecast={this.state.forecast}
             weather={this.state.weather}
             getWeather={this.getWeather}
@@ -66,11 +66,24 @@ class App extends React.Component {
             />
           </div>
           <WeeklyForecast forecast={this.state.forecast} />
-          {console.log(this.state)}
         </div>
       );
     } else {
-      return <div>Loading data</div>;
+      return (
+        <div class="preloader-wrapper big active">
+          <div class="spinner-layer spinner-blue-only">
+            <div class="circle-clipper left">
+              <div class="circle" />
+            </div>
+            <div class="gap-patch">
+              <div class="circle" />
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle" />
+            </div>
+          </div>
+        </div>
+      );
     }
   }
 }

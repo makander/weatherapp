@@ -6,8 +6,11 @@ const WeeklyForecast = props => {
   const filteredList = props.forecast.list
     .filter(element => element.dt_txt.includes("12:00"))
     .map(element => <WeeklyCard data={element} />);
-    return <div className="row valign-wrapper">{filteredList}</div>;
-
+  return (
+    <div id="weeklyrow" className="row">
+      {filteredList}
+    </div>
+  );
 };
 
 const WeeklyCard = ({
@@ -18,8 +21,7 @@ const WeeklyCard = ({
   }
 }) => {
   return (
-
-    <div className="col s2">
+    <div className="col s12 m2 l2">
       <div className="card-panel center-align">
         <p>{DayConverter(dt)}</p>
         <WeatherIcon
@@ -30,9 +32,8 @@ const WeeklyCard = ({
           rotate="90"
         />
         <p>{temp} &#176;</p>
-        </div>
       </div>
-
+    </div>
   );
 };
 

@@ -2,9 +2,9 @@ body {
   background-color: whitesmoke;
 }
 
- #daily-card-row {
+#daily-card-row {
   padding-top: 1rem;
-} 
+}
 
 .card-image {
   font-size: 7rem;
@@ -21,12 +21,11 @@ body {
 }
 
 .card-panel p {
-  font-size: 1, 5rem;
   text-align: center;
 }
 
 .card-panel .icon {
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
 .daily-ov-content {
@@ -34,5 +33,24 @@ body {
 }
 
 .btn-small {
- margin: 1rem;
+  margin: 1rem;
+}
+
+#weeklyrow {
+  margin-left: 10rem;
+}
+
+@media only screen and (min-device-width: 200px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  .card-panel .icon {
+    font-size: 1rem;
+  }
+
+  .card-panel p {
+    font-size: 0.5rem;
+  }
+
+  #weeklyrow {
+    margin-left: 0rem;
+    padding: 0rem;
+  }
 }

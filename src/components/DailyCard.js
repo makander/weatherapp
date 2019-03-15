@@ -14,7 +14,7 @@ const DailyCard = ({
   forecast
 }) => {
   return (
-    <div className="col s12 m4 offset-m1">
+    <div className="col s12 m4 l4 offset-l1 offset-m1">
       <div className="card" id="dailycard">
         <div className="card-content center-align">
           <span className="card-title">{name}</span>
