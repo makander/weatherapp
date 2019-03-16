@@ -24,7 +24,7 @@ class App extends React.Component {
           long: position.coords.longitude
         },
         () => this.getWeather()
-      )
+      ), err => console.log( err.message )
     );
   };
 

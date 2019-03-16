@@ -8,17 +8,13 @@ state = {
 }
 
 SearchCity = ( search ) => {
-  const city = cities.filter(city => city.name.toLowerCase().includes(search.toLowerCase()));
-  console.log(city);
-  console.log(city[0].coord.lat);
-  let lat = city[0].coord.lat
-  let long = city[0].coord.lon
-  console.log(lat, long);
+  const formattedSearch = search.charAt(0).toUpperCase() + search.slice(1);
+  const city = cities.filter(city => city.name.includes(formattedSearch));
+  let lat = city[0].coord.lat;
+  let long = city[0].coord.lon;
+  console.log(lat, long, formattedSearch);
   this.props.searchWeather(lat, long);
 }
-
-
-
 
 render() 
   {
@@ -31,7 +27,6 @@ render()
           <form onSubmit={e => {
                   e.preventDefault();
                   this.SearchCity(this.state.searchValue);
-                  //this.props.searchWeather(this)
                   console.log(this.state);
                 }}>
 
