@@ -39,7 +39,7 @@ const DailyOverViewCard = ({
           rotate="90"
         />
       </div>
-      <p>{temp} &#176;</p>
+      <p>{temp.toFixed(1)} &#176;</p>
     </div>
   );
 };

@@ -28,6 +28,17 @@ class App extends React.Component {
     );
   };
 
+
+  searchWeather = (lat, lon) => {
+    this.setState(
+      {
+        lat: `${lat}`,
+        long: `${lon}`
+      },
+      () => this.getWeather()
+    );
+  }
+
   getWeather = async (units = "metric") => {
     const weatherResponse = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?lat=${
@@ -57,6 +68,7 @@ class App extends React.Component {
             forecast={this.state.forecast}
             weather={this.state.weather}
             getWeather={this.getWeather}
+            searchWeather={this.searchWeather}
           />
           <div className="row" id="daily-card-row">
             <DailyCard weather={this.state.weather} />

@@ -31,7 +31,7 @@ const WeeklyCard = ({
           flip="horizontal"
           rotate="90"
         />
-        <p>{temp} &#176;</p>
+        <p>{temp.toFixed(1)} &#176;</p>
       </div>
     </div>
   );
