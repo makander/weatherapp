@@ -14,7 +14,7 @@ const DailyCard = ({
   forecast
 }) => {
   return (
-    <div className="col s12 m4 l4 offset-l1 offset-m1">
+    <div className="col s12 m6 l6">
       <div className="card" id="dailycard">
         <div className="card-content center-align">
           <span className="card-title">{name}</span>
@@ -28,8 +28,8 @@ const DailyCard = ({
           <p> Temperature: {temp.toFixed(1)} &#176; </p>
           <p> Humidity: {humidity} %</p>
           <p> Wind: {speed} </p>
-          <p> Sunset: {TimeConverter([sunset])}</p>
           <p> Sunrise: {TimeConverter([sunrise])}</p>
+          <p> Sunset: {TimeConverter([sunset])}</p>
         </div>
       </div>
     </div>

@@ -32,21 +32,39 @@ body {
   padding: 0.5rem;
 }
 
-.btn-small {
+.btn {
   margin: 1rem;
 }
 
-#weeklyrow {
-  margin-left: 10rem;
+form {
+  display: inline;
 }
 
+input {
+  display: inline-block;
+}
+
+#submit {
+  background-color: amber accent-2;
+}
+
+/* nav .nav-wrapper form, nav .nav-wrapper form .input-field{
+  height: 100%;
+  width: auto;
+
+  } */
+
+/* #weeklyrow {
+  margin-left: 10rem;
+}
+ */
 @media only screen and (min-device-width: 200px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
   .card-panel .icon {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
   .card-panel p {
-    font-size: 0.5rem;
+    font-size: 1.5rem;
   }
 
   #weeklyrow {

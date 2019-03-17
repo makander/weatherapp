@@ -21,7 +21,7 @@ const WeeklyCard = ({
   }
 }) => {
   return (
-    <div className="col s12 m2 l2">
+    <div className="col s12 m6 l2">
       <div className="card-panel center-align">
         <p>{DayConverter(dt)}</p>
         <WeatherIcon
