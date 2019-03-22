@@ -28,8 +28,8 @@ class App extends React.Component {
         ),
       err => {
         this.setState({
-          lat: 25,
-          long: 71
+          lat: 59.3293,
+          long: 18.0686
         });
         this.getWeather();
       }
