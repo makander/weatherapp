@@ -17,17 +17,24 @@ class App extends React.Component {
   }
 
   getPosition = () => {
-    navigator.geolocation.getCurrentPosition(position =>
-      this.setState(
-        {
-          lat: position.coords.latitude,
-          long: position.coords.longitude
-        },
-        () => this.getWeather()
-      ), err => console.log( err.message )
+    navigator.geolocation.getCurrentPosition(
+      position =>
+        this.setState(
+          {
+            lat: position.coords.latitude,
+            long: position.coords.longitude
+          },
+          () => this.getWeather()
+        ),
+      err => {
+        this.setState({
+          lat: 25,
+          long: 71
+        });
+        this.getWeather();
+      }
     );
   };
-
 
   searchWeather = (lat, lon) => {
     this.setState(
@@ -37,7 +44,7 @@ class App extends React.Component {
       },
       () => this.getWeather()
     );
-  }
+  };
 
   getWeather = async (units = "metric") => {
     const weatherResponse = await fetch(
